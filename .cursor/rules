@@ -1,0 +1,7 @@
+Este projeto segue arquitetura em camadas: controller -> service -> repository.
+Controllers nunca acessam repository diretamente.
+Controllers nunca retornam entidades JPA — sempre DTOs de response.
+Usar Lombok (@Getter, @Setter, @Builder) em vez de getters/setters manuais.
+Exceptions de negócio devem estender uma RuntimeException customizada e ser tratadas em um @ControllerAdvice global.
+Toda entidade com relacionamento usa FetchType.LAZY por padrão.
+Não usar @Data do Lombok em entidades JPA (problema com equals/hashCode em relacionamentos).
