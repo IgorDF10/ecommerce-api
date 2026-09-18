@@ -1,4 +1,4 @@
 CREATE TABLE categories(
-    ID INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    NAME VARCHAR(100) NOT NULL UNIQUE
+    id bigint generated always as identity primary key,
+    name varchar(100) not null unique
 );
